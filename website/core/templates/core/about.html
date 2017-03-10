@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="top">
+  <ul class="navbar theme top left-align large">
+    <li class="opennav right hide-large">
+      <a class="hover-white large theme-l1" href="javascript:void(0)" onclick="open()"><i class="fa fa-bars"></i></a>
+    </li>
+    <li><a href="#" class="theme-l1">School Content Hub</a></li>
+    <li class="hide-small"><a href="{% url 'home' %}" class="hover-white">Home</a></li>
+   
+  </ul>
+</div>
+
+
+<div class="overlay hide-large" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="main" style="margin-left:550px">
+  <div class="row padding-64">
+    <div class="twothird container">
+
+
+    <article>
+    <h6><b>About us</b></h6>
+      <p>School Content Hub offers students a way to share school related content such as notes and lecture videos with their class mates in one easily accessible place!
+      </p>
+    </article>
+    <article>
+    <h6><b>FAQ</b></h6>
+    <h4>How does School Content Hub work?</h4>
+    <p>School Content Hub is a community of university students sharing valuable course content such as lecture notes, textbook summaries and exam study guides. Students contribute their own self-created documents.</p>
+    <h4>Who uploads notes?</h4>
+    <p>All the notes you see and find on School Content Hub are created by university students that have taken or may be currently taking the same courses as you. They share their valuable course notes in order to help other students!</p>
+    <h4>How do I upload my own notes?</h4>
+    <p>Simply locate the upload tab on the left side of your screen and follow the instructions.</p>
+  </article>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+{% endblock %}

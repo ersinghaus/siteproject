@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style style="text/css">
+  	.hoverTable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.hoverTable td{ 
+		padding:7px; border:#000000 1px solid;
+	}
+	.hoverTable tr{
+		background: 		#FFFFFF;
+	}
+    .hoverTable tr:hover {
+          background-color: #808080;
+    }
+</style>
+
+<div class="top">
+  <ul class="navbar theme top left-align large">
+    <li class="opennav right hide-large">
+      <a class="hover-white large theme-l1" href="javascript:void(0)" onclick="open()"><i class="fa fa-bars"></i></a>
+    </li>
+    <li><a href="#" class="theme-l1">School Content Hub</a></li>
+    <li class="hide-small"><a href="{% url 'home' %}" class="hover-white">Home</a></li>
+   
+  </ul>
+</div>
+
+
+<div class="overlay hide-large" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="main" style="margin-left:550px">
+  <div class="row padding-64">
+    <div class="twothird container">
+      <div> 
+        <div class="container">
+          <center><h2>History</h2></center>
+          <table class="hoverTable">
+            <thead>
+              <tr>
+                <th>File Name</th>
+                <th>Description</th>
+                <th>Uploaded Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for obj in documents %}
+              <tr>
+                <td><a href="{{ obj.document.url }}">{{ obj.name }}</a></td>
+                <td>{{obj.description}}</td>
+                <td>{{ obj.uploaded_at }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+{% endblock %}

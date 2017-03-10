@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="top">
+  <ul class="navbar theme top left-align large">
+    <li class="opennav right hide-large">
+      <a class="hover-white large theme-l1" href="javascript:void(0)" onclick="open()"><i class="fa fa-bars"></i></a>
+    </li>
+    <li><a href="#" class="theme-l1">School Content Hub</a></li>
+    <li class="hide-small"><a href="/about/" class="hover-white">About</a></li>
+   
+  </ul>
+</div>
+
+
+<div class="overlay hide-large" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="main" style="margin-left:550px">
+  <div class="row padding-64">
+    <div class="twothird container">
+
+
+<article>
+    <h6><b>What We Provide</b></h6>
+      <p>The School Content Hub offers students a way to share school related content such as notes and lecture videos with their class mates in one easily accessible place. All of our available material can be found in their appropriate subject folder on the left navigation bar. Everything on this site is provided by student submission. 
+      </p>
+    </article>
+    
+
+
+
+{% endblock %}
