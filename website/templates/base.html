@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Base</title>
+  </head>
+ 
+ 
+ {% load static %}
+  
+ 
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/mystyle.css' %}">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.sidenav a,.sidenav h4 {padding: 12px;}
+.navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+article {
+    padding: 1em;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+</style>
+
+ 
+  <body>
+
+<div class="top">
+  <ul class="navbar theme top left-align large">
+    <li class="opennav right hide-large">
+      <a class="hover-white large theme-l1" href="javascript:void(0)" onclick="open()"><i class="fa fa-bars"></i></a>
+    </li>
+    <li><a href="#" class="theme-l1">School Content Hub</a></li>
+    <li class="hide-small"><a href="/about/" class="hover-white">About</a></li>
+   
+  </ul>
+</div>
+
+<nav class="sidenav collapse theme-l5 animate-left" style="z-index:3;width:250px;margin-top:51px;" id="mySidenav">
+  <a href="javascript:void(0)" onclick="close()" class="right xlarge padding-large hover-black hide-large" title="close menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4><b>Subjects</b></h4>
+  <a href="/math/" class="hover-black">Math</a>
+  <a href="/science/" class="hover-black">Science</a>
+  <a href="/english/" class="hover-black">English</a>
+  <a href="/art/" class="hover-black">Art</a>
+  <a href="/history/" class="hover-black">History</a>
+  <a href="/uploads/form" class="hover-black">Upload</a>
+</nav>
+
+<div class="overlay hide-large" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="main" style="margin-left:550px">
+  <div class="row padding-64">
+    <div class="twothird container">
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+    
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
